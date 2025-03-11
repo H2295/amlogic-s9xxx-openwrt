@@ -12,16 +12,16 @@ on:
       source_branch:
         description: "Select the source branch"
         required: false
-        default: "openwrt-main"
+        default: "immortalwrt-openwrt-24.10"
         type: choice
         options:
           - openwrt-main
           - lede-master
-          - immortalwrt-master
+          - immortalwrt-openwrt-24.10
       openwrt_board:
         description: "Select device board"
         required: false
-        default: "all"
+        default: "zysj"
         type: choice
         options:
           - all
@@ -302,7 +302,7 @@ jobs:
               TAGS_NAME="lede"
           elif [[ "${{ inputs.source_branch }}" == *"immortalwrt"* ]]; then
               REPO_URL="https://github.com/immortalwrt/immortalwrt"
-              REPO_BRANCH="master"
+              REPO_BRANCH="openwrt-24.10"
               TAGS_NAME="immortalwrt"
           else
               echo "Unknown source code repository."
