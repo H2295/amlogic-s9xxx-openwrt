@@ -12,12 +12,12 @@ on:
       source_branch:
         description: "Select the source branch"
         required: false
-        default: "immortalwrt-openwrt-24.10"
+        default: "immortalwrt-master"
         type: choice
         options:
           - openwrt-main
           - lede-master
-          - immortalwrt-openwrt-24.10
+          - immortalwrt-master
       openwrt_board:
         description: "Select device board"
         required: false
